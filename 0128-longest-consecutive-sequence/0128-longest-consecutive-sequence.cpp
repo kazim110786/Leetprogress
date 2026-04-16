@@ -4,6 +4,9 @@ public:
         int maxlen=1;
         int count=1;
         int n=nums.size();
+        if(n==0){
+            return 0;
+        }
         sort(nums.begin(),nums.end());
         for(int i=1;i<n;i++){
             if(nums[i-1]==nums[i]){
