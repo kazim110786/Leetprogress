@@ -12,10 +12,9 @@ public:
         if(start==-1){
             return {-1,-1};
         }
-        for(int i=start+1;i<nums.size();i++){
+        for(int i=start;i<nums.size();i++){
             if(nums[i]==target){
                 end=i;
-                break;
             }
         }
         return {start,end};
