@@ -6,11 +6,12 @@ public:
         for(int i=0;i<=n;i++){
             if(i==n || s[i]==' '){
                 if(word!=""){
-                    if(ans!=""){
-                        ans=word+" "+ans;
-                    }else{
-                        ans=word;
-                    }
+                    continue;
+                }
+                if(ans!=""){
+                    ans=word+" "+ans;
+                }else{
+                    ans=word;
                 }
                 word="";
             }else{
