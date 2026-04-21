@@ -5,7 +5,7 @@ public:
         string ans, word;
         for(int i=0;i<=n;i++){
             if(i==n || s[i]==' '){
-                if(word!=""){
+                if(word==""){
                     continue;
                 }
                 if(ans!=""){
