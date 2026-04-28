@@ -6,13 +6,13 @@ public:
         if(m!=n){
             return false;
         }
-        int count[26]={0};
+        int freq[26]={0};
         for(int i=0;i<m;i++){
-            count[s[i]-'a']++;
-            count[t[i]-'a']--;
+            freq[s[i]-'a']++;
+            freq[t[i]-'a']--;
         }
         for(int i=0;i<26;i++){
-            if(count[i]!=0){
+            if(freq[i]!=0){
                 return false;
             }
         }
