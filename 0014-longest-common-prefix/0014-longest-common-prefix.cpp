@@ -6,9 +6,9 @@ public:
         sort(strs.begin(),strs.end());
         string first=strs[0];
         string last=strs[n-1];
-        for(int i=0;i<n;i++){
+        for(int i=0;i<min(first.length(),last.length());i++){
             if(first[i]==last[i]){
-                ans.push_back(first[i]);
+                ans+=first[i];
             }else{
                 break;
             }
