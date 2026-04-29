@@ -5,7 +5,7 @@ public:
         for(char a:s){
             freq[a]++;
         }
-        sort(s.begin(),s.end(),[&](char a, char b){
+        sort(s.begin(),s.end(),[&](char a,char b){
             if(freq[a]==freq[b]){
                 return b>a;
             }
