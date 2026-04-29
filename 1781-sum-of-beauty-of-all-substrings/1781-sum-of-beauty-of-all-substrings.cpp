@@ -8,14 +8,15 @@ public:
             for(int j=i;j<n;j++){
                 freq[s[j]-'a']++;
             
-                int mx=0, mn=INT_MAX;
+                int maxi=0;
+                int mini=INT_MAX;
                 for(int k=0;k<26;k++){
                     if(freq[k]>0){
-                        mx=max(mx,freq[k]);
-                        mn=min(mn,freq[k]);
+                        maxi=max(maxi,freq[k]);
+                        mini=min(mini,freq[k]);
                     }
                 }
-                ans+=(mx-mn);
+                ans+=(maxi-mini);
             }
         }
         return ans;
