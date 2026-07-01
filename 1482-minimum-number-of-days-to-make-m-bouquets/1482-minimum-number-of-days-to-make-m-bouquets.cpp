@@ -16,7 +16,7 @@ public:
         return bouquet>=m;
     }
     int minDays(vector<int>& bloomDay, int m, int k) {
-        int start=0, end=*max_element(bloomDay.begin(),bloomDay.end());
+        int start=*min_element(bloomDay.begin(),bloomDay.end()), end=*max_element(bloomDay.begin(),bloomDay.end());
         int ans=-1;
         while(start<=end){
             int mid=start+(end-start)/2;
