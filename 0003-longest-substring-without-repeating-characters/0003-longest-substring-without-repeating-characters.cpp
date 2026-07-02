@@ -5,7 +5,7 @@ public:
         int maxLength=0;
         int left=0;
         for(int right=0;right<s.size();right++){
-            while(charSet.count(s[right])){
+            while(charSet.contains(s[right])){
                 charSet.erase(s[left]);
                 left++;
             }
