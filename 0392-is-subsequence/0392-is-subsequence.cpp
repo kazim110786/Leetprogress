@@ -6,9 +6,9 @@ public:
             if(s[start]==t[i]){
                 start++;
             }
-            if(start==s.length()){
-                return true;
-            }
+            // if(start==s.length()){
+            //     return true;
+            // }
         }
         if(start==s.length()){
             return true;
