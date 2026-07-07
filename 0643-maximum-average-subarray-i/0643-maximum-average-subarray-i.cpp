@@ -4,20 +4,18 @@ public:
         int n=nums.size();
         int windowSum=0;
         for(int i=0;i<k;i++){
-            windowSum+=nums[i];  
+            windowSum+=nums[i];
         }
         int maxSum=windowSum;
-        //Sliding window starts
-        int start_index=0;
-        int end_index=k;
-        while(end_index<n){
-            windowSum-=nums[start_index];
-            start_index++;
-            windowSum+=nums[end_index];
-            end_index++;
-            maxSum=max(windowSum,maxSum);
+        int start=0;
+        int end=k;
+        while(end<n){
+            windowSum-=nums[start];
+            start++;
+            windowSum+=nums[end];
+            end++;
+            maxSum=max(maxSum,windowSum);
         }
         return (double)maxSum/k;
-        
     }
 };
