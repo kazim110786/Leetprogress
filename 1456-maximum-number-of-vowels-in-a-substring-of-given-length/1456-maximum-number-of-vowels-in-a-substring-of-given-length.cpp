@@ -9,13 +9,17 @@ public:
             }
         }
         int ans=count;
-        for(int i=k;i<n;i++){
-            if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
-                count++;
-            }
-            if(s[i-k]=='a' || s[i-k]=='e' || s[i-k]=='i' || s[i-k]=='o' || s[i-k]=='u'){
+        int start=0;
+        int end=k;
+        while(end<n){
+            if(s[start]=='a' || s[start]=='e' || s[start]=='i' || s[start]=='o' || s[start]=='u'){
                 count--;
             }
+            start++;
+            if(s[end]=='a' || s[end]=='e' || s[end]=='i' || s[end]=='o' || s[end]=='u'){
+                count++;
+            }
+            end++;
             ans=max(ans,count);
         }
         return ans;
