@@ -5,8 +5,10 @@ public:
         for(char c:r){
             if(c!='#'){
                 ans.push_back(c);
-            }else if(!ans.empty()){
-                ans.pop_back();
+            }else{
+                if(!ans.empty()){
+                    ans.pop_back();
+                }
             }
         }
         return ans;
