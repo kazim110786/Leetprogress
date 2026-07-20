@@ -10,6 +10,7 @@ public:
         if(windowSum>=threshold*k){
             count++;
         }
+        int ans=count;
         int start=0;
         int end=k;
         while(end<n){
@@ -20,7 +21,8 @@ public:
             if(windowSum>=threshold*k){
                 count++;
             }
+            ans=max(count,ans);
         }
-        return count;
+        return ans;
     }
 };
