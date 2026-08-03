@@ -6,9 +6,8 @@ public:
         int maxi=INT_MIN;
         for(int i=0;i<n;i++){
             int profit=prices[i]-mini;
-            mini=min(mini,prices[i]);
             maxi=max(profit,maxi);
-            // mini=min(mini,prices[i]);
+            mini=min(mini,prices[i]);
         }
         return maxi;
     }
