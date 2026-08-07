@@ -8,9 +8,8 @@ public:
                 count++;
             }
         }
-        int ans=count;
-        int start=0;
-        int end=k;
+        int max_count=count;
+        int start=0, end=k;
         while(end<n){
             if(s[start]=='a' || s[start]=='e' || s[start]=='i' || s[start]=='o' || s[start]=='u'){
                 count--;
@@ -20,8 +19,8 @@ public:
                 count++;
             }
             end++;
-            ans=max(ans,count);
+            max_count=max(count,max_count);
         }
-        return ans;
+        return max_count;
     }
 };
