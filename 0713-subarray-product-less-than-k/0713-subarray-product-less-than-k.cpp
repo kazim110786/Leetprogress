@@ -10,7 +10,7 @@ public:
         }
         while(end<n){
             win_prod*=nums[end];
-            while(win_prod>=k ){
+            while(win_prod>=k){
                 win_prod/=nums[start];
                 start++;
             }
