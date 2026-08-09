@@ -1,7 +1,9 @@
 class Solution {
 public:
     bool rotateString(string s, string goal) {
-        if(s.length()!=goal.length()){
+        int m=s.length();
+        int n=goal.length();
+        if(m!=n){
             return false;
         }
         string ans=s+s;
