@@ -7,7 +7,7 @@ public:
         for(int i=0;i<n;i++){
             if(s[i]=='('){
                 count++;
-                max_depth=max(count,max_depth);
+                max_depth=max(max_depth,count);
             }else if(s[i]==')'){
                 count--;
             }
