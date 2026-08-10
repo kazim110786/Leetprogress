@@ -1,10 +1,14 @@
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {
-        int m1[256]={0};
-        int m2[256]={0};
-        for(int i=0;i<s.length();i++){
-            if(m1[s[i]]==0 && m2[t[i]]==0){
+        unordered_map<char,char>m1,m2;
+        int m=s.length();
+        int n=t.length();
+        if(m!=n){
+            return false;
+        }
+        for(int i=0;i<m;i++){
+            if(m1.find(s[i])==m1.end() && m2.find(t[i])==m2.end()){
                 m1[s[i]]=t[i];
                 m2[t[i]]=s[i];
             }else{
