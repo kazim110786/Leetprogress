@@ -9,10 +9,10 @@ public:
                 if(word==""){
                     continue;
                 }
-                if(ans!=""){
-                    ans=word+" "+ans;
-                }else{
+                if(ans==""){
                     ans=word;
+                }else{
+                    ans=word+" "+ans;
                 }
                 word="";
             }else{
