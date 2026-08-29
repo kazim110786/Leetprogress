@@ -7,7 +7,7 @@ public:
             return false;
         }
         int freq[26]={0};
-        for(int i=0;i<m;i++){
+        for(int i=0;i<n;i++){
             freq[s[i]-'a']++;
             freq[t[i]-'a']--;
         }
