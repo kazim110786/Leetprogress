@@ -4,16 +4,16 @@ public:
         int n=s.length();
         string ans="";
         int count=0;
-        for(char c:s){
-            if(c=='('){
+        for(int i=0;i<n;i++){
+            if(s[i]=='('){
                 if(count>0){
-                    ans+=c;
+                    ans+=s[i];
                 }
                 count++;
             }else{
                 count--;
                 if(count>0){
-                    ans+=c;
+                    ans+=s[i];
                 }
             }
         }
