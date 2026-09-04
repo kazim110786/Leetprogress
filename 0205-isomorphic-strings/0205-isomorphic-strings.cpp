@@ -15,6 +15,9 @@ public:
                 if(m1[s[i]]!=t[i]){
                     return false;
                 }
+                if(m2[t[i]]!=s[i]){
+                    return false;
+                }
             }
         }
         return true;
