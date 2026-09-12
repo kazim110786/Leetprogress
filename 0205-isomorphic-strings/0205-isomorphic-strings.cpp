@@ -7,17 +7,29 @@ public:
         if(m!=n){
             return false;
         }
+        // for(int i=0;i<m;i++){
+        //     if(m1.find(s[i])==m1.end() && m2.find(t[i])==m2.end()){
+        //         m1[s[i]]=t[i];
+        //         m2[t[i]]=s[i];
+        //     }else{
+        //         if(m1[s[i]]!=t[i]){
+        //             return false;
+        //         }
+        //         if(m2[t[i]]!=s[i]){
+        //             return false;
+        //         }
+        //     }
+        // }
         for(int i=0;i<m;i++){
-            if(m1.find(s[i])==m1.end() && m2.find(t[i])==m2.end()){
-                m1[s[i]]=t[i];
-                m2[t[i]]=s[i];
-            }else{
-                if(m1[s[i]]!=t[i]){
-                    return false;
-                }
-                if(m2[t[i]]!=s[i]){
-                    return false;
-                }
+            m1[s[i]]=t[i];
+            m2[t[i]]=s[i];
+        }
+        for(int i=0;i<m;i++){
+            if(m1[s[i]]!=t[i]){
+                return false;
+            }
+            if(m2[t[i]]!=s[i]){
+                return false;
             }
         }
         return true;
