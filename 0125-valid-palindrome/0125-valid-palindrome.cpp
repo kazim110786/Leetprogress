@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int n=s.size();
+        int n=s.length();
         int start=0;
         int end=n-1;
         while(start<end){
